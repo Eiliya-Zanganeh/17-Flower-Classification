@@ -60,7 +60,7 @@ def train():
             outputs = argmax(outputs, dim=1)
             accuracy = sum(outputs == labels).item() / len(labels)
 
-            validation_loss += loss
+            validation_loss += loss.item()
             validation_accuracy += accuracy
             total_batch += 1
 
